@@ -1,0 +1,31 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.table_container {
+    width: 100%;
+    background: #ddd;
+    overflow-x: auto;
+}
+
+.table_head {
+    display: flex;
+    align-items: center;
+}
+
+.table_body {
+    display: flex;
+    align-items: center;
+}
+
+.table_row {
+    width: 100%;
+}
+
+.table_data {
+    width: 100%;
+    min-width: 150px;
+    text-align: center;
+    background: gray;
+}
