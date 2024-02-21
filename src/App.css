@@ -1,6 +1,6 @@
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     padding: 10px;
     position: relative;
 }
@@ -14,38 +14,4 @@
 
 .icon {
     cursor: pointer;
-}
-
-.table_container {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.table_head {
-    display: flex;
-    align-items: center;
-}
-
-.table_row {
-    width: 100%;
-    display: flex;
-    margin-bottom: 1px;
-    align-items: center;
-}
-
-.table_head_data {
-    width: 100%;
-    min-width: 150px;
-    padding: 15px 0;
-    text-align: center;
-    color: #ffff;
-    background: #222;
-}
-
-.table_body_data {
-    width: 100%;
-    min-width: 150px;
-    padding: 10px 0;
-    text-align: center;
-    background: #eee;
 }

@@ -2,19 +2,8 @@ import "./App.css";
 import { FiMenu } from "react-icons/fi";
 import Modal from "./components/modal/Modal";
 import { useState } from "react";
-import { columnsData } from "./utils/data";
-
-const data = [
-  {
-    id: 1,
-    title: "Beetlejuice",
-    category: "Fashion",
-    price: 2330,
-    year: "1988",
-    author: "Admin",
-    status: "Pending",
-  },
-];
+import { columnsData, data } from "./utils/data";
+import Table from "./components/table/Table";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,29 +31,7 @@ const App = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         />
       </div>
-      <div className="table_container">
-        <div className="table_head">
-          {columns
-            .sort((a, b) => a.order - b.order)
-            .map((column, index) => (
-              <div key={index} className="table_head_data">
-                {column.name}
-              </div>
-            ))}
-        </div>
-
-        <div className="table_body">
-          {data.map((row) => (
-            <div key={row.id} className="table_row">
-              {columns.map((column, index) => (
-                <div key={index} className="table_body_data">
-                  {row[column.value]}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      <Table columns={columns} data={data} />
       {isOpen && (
         <Modal
           columns={columns}

@@ -1,0 +1,35 @@
+.table_container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table_head {
+    display: flex;
+    align-items: center;
+}
+
+.table_row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1px;
+    align-items: stretch;
+}
+
+.table_head_data {
+    width: 100%;
+    min-width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    color: #ffff;
+    background: #222;
+}
+
+.table_body_data {
+    width: 100%;
+    min-width: 150px;
+    background: #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
