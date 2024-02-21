@@ -1,9 +1,19 @@
 import "./App.css";
+import { FiMenu } from "react-icons/fi";
+import Modal from "./components/modal/Modal";
 
 const columns = [
   {
     name: "Title",
     value: "title",
+  },
+  {
+    name: "Category",
+    value: "category",
+  },
+  {
+    name: "Price",
+    value: "price",
   },
   {
     name: "Year",
@@ -14,8 +24,8 @@ const columns = [
     value: "author",
   },
   {
-    name: "User",
-    value: "user",
+    name: "Status",
+    value: "status",
   },
 ];
 
@@ -23,23 +33,21 @@ const data = [
   {
     id: 1,
     title: "Beetlejuice",
+    category: "Fashion",
+    price: 2330,
     year: "1988",
-    author: "sadfsdsdfl s sdlfkjsdfds",
-    user: "user",
-  },
-  {
-    id: 2,
-    title: "Ghostbusters",
-    year: "1984",
-    author: "Author",
-    user: "user",
+    author: "Admin",
+    status: "Pending",
   },
 ];
 
 const App = () => {
   return (
     <div className="container">
-      <h2>React Table</h2>
+      <div className="navbar">
+        <h2>React Table</h2>
+        <FiMenu size={30} className="icon" />
+      </div>
       <div className="table_container">
         <div className="table_head">
           {columns.map((colum, index) => (
@@ -50,10 +58,10 @@ const App = () => {
         </div>
 
         <div className="table_body">
-          {columns.map((colum, index) => (
-            <div key={index} className="table_row">
-              {data.map((row) => (
-                <div key={row.id} className="table_body_data">
+          {data.map((row) => (
+            <div key={row.id} className="table_row">
+              {columns.map((colum, index) => (
+                <div key={index} className="table_body_data">
                   {row[colum.value]}
                 </div>
               ))}
@@ -61,6 +69,7 @@ const App = () => {
           ))}
         </div>
       </div>
+      <Modal />
     </div>
   );
 };
